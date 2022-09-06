@@ -1,0 +1,148 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+/* ---> this property includes padding 
+in the final width of an element */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* this is a 'wild card', this code means that the pseudo-elements
+ are going to inherit the box-sizing property of the html */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(217deg, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+.card {
+  width: 350px;
+  padding: 24px;
+  border-radius: 15px;
+  background-color: hsl(216deg, 50%, 16%);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+.card__banner {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.card__img {
+  width: 100%;
+  display: block;
+}
+.card .overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+.card .overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__banner:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.card__body h1 {
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 100%);
+}
+.card__body h1:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.card__body p {
+  font-size: 18px;
+  line-height: 26px;
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.card__infos {
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(215deg, 51%, 70%, 0.5);
+  padding-top: 15px;
+  padding-bottom: 25px;
+  font-size: 16px;
+}
+.card__price {
+  color: hsl(178deg, 100%, 50%);
+}
+.card__price img {
+  margin-right: 6px;
+  margin-top: 5px;
+}
+.card__countdown {
+  color: hsl(215deg, 51%, 70%);
+}
+.card__countdown img {
+  margin-right: 6px;
+  margin-top: 5px;
+}
+.card__creator {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.card__creator img {
+  width: 34px;
+  height: 34px;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.card__creator p {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 16px;
+  margin-top: 0px;
+}
+.card__creator a {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__creator a:hover {
+  color: hsl(178deg, 100%, 50%);
+}/*# sourceMappingURL=style.css.map */

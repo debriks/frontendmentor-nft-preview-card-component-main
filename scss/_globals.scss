@@ -1,0 +1,60 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+/* ---> this property includes padding 
+in the final width of an element */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* this is a 'wild card', this code means that the pseudo-elements
+ are going to inherit the box-sizing property of the html */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $veryDarkBlueMain;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+// Flexbox
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-col {
+    flex-direction: column;
+  }
+
+  &-row {
+    flex-direction: row;
+  }
+}
